@@ -1,5 +1,5 @@
 <% if current_user %>
-	<footer class="footer-distributed">
+	<footer class="footer-distributed  navbar-fixed-bottom">
 		<div class="footer-right">
 			<a href="#"><i class="fa fa-facebook"></i></a>
 			<a href="#"><i class="fa fa-twitter"></i></a>
@@ -9,9 +9,9 @@
 		<div class="footer-left">
 			<p class="footer-links">
 			·
-			<a class="page-scroll" href="#portfolio">Contact Us</a>
+			<%= link_to "Contact Us", pages_contacts_path, class: "page-scroll" %>
 			·
-			<a class="page-scroll" href="#services">About Us</a>
+			<%= link_to "About Us", pages_about_path, class: "page-scroll" %>
 			·
 			</p>
 			<p> </p>
@@ -19,37 +19,29 @@
 	</footer>
 <% else %>
 
-<footer class="footer-distributed">
+<footer class="footer-distributed navbar-fixed-bottom">
 	<div class="footer-left">
-		<h3>Company<span>logo</span></h3>
 		<p class="footer-links">
-		<a href="#">Home</a>
+		<a href="/">Home</a>
 		·
-		<a href="#">Blog</a>
+		<a href="/articles">Blog</a>
 		·
-		<a href="#">Pricing</a>
+		<%= link_to "Pricing", pages_contacts_path, class: "page-scroll" %>
 		·
-		<a href="#">About</a>
+		<%= link_to "About Us", pages_about_path, class: "page-scroll" %>
 		·
 		<a href="#">Faq</a>
 		·
-		<a href="#">Contact</a>
+		<%= link_to "Contact Us", pages_contacts_path, class: "page-scroll" %>
 		</p>
-		<p class="footer-company-name">Company Name &copy; 2015</p>
-		<div class="footer-icons">
+		<p class="footer-company-name">SoftExgineering &copy; 2018</p>
+
+	</div>		
+	<div class="footer-right footer-icons">
 			<a href="#"><i class="fa fa-facebook"></i></a>
 			<a href="#"><i class="fa fa-twitter"></i></a>
 			<a href="#"><i class="fa fa-linkedin"></i></a>
 			<a href="#"><i class="fa fa-github"></i></a>
-		</div>
-	</div>
-	<div class="footer-right">
-		<p>Contact Us</p>
-		<form action="#" method="post">
-			<input type="text" name="email" placeholder="Email" />
-			<textarea name="message" placeholder="Message"></textarea>
-			<button>Send</button>
-		</form>
 	</div>
 </footer>
 <% end %> 
